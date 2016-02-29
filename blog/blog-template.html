@@ -1,23 +1,31 @@
 <!DOCTYPE HTML>
 <html>
-	<header>
-		<img src="imgs/selfie.jpg">
-		<h1>Blog</h1>
-	</header>
-	<nav>
-		<a href="/#/">Home</a>
-		<a href="/#/">Blog</a>
-		<a href="/#/">About Me</a>
-		<a href="/#/">Projects</a>
-	</nav>
+	<title>Blog Post Title</title>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+	<div id="topbox" class="clearfix">
+		<header>
+			<span><img src="imgs/selfie.jpg"></span>
+			<span><h1>Evan Druce's Homepage</h1></span>
+		</header>
+		<nav>
+			<a href="../index.html">Home</a>
+			<a class="active" href="index.html">Blog</a>
+			<a href="/#/">About Me</a>
+			<a href="/#/">Projects</a>
+		</nav>
+	</div>
 	<body>
 		<article>
 			<header>
 				<h2>Blog Post Title</h2>
 			</header>
-			<p>Herp derpsum perp dee derp, mer herderder. Sherp berp derpler, herpem serp tee perper merpus terp dee. Sherpus berps herpsum herpler. Berps herderder herpsum herpderpsmer herp? Derperker der herpler derp derpsum berps perp sherpus. Merpus mer perper derpler perp tee. Berps derpus, derpler ler mer nerpy herpem derp der derps. Terp tee herpsum derpus der nerpy herpderpsmer dee. Merpus derp terp ner sherlamer. Derps herpler serp derpus. Derpler sherlamer derpy sherp sherper, ler dee derps. Ler ner derp herpsum sherp. Ler merpus, derp der derpy derperker perp. Der derpler sherlamer herp mer. Herpler derpus mer, derps ner herpy! Merpus herp, nerpy merp herderder. Ler herpsum derperker herpderpsmer herderder perper sherp. Serp derpler herderder berps. Derpus mer, merp derp herpler. Herpem terp serp derps herpsum sherper.</p>
-			<br>
-			<p>Herp derpsum le berp pee dee herderder ner. Merpus derpler ler mer derps der. Berp ler herderder, herpem derpus. Derperker perp ter, perper derps. Derpler derpus herpem perper. Dee herpem derps herp derpsum herpy le. Berps berp dee sherpus herp terp sherp tee sherlamer herpem! Berps dee, nerpy berp sherlamer derpler merp. Derps derpus le, derperker herpsum derp. Terp terpus sherpus merp. Tee pee serp derp sherper herpsum derpsum. Derperker terp pee sherper mer le berp perper herp derps. Pee derpus sherlamer merp derp derps mer. Herpy dee derps sherper. Herpsum herpderpsmer dee derp ler terp perper perp. Terpus herpderpsmer derpus, sherpus mer derperker merp herpy. Tee sherpus merp derpsum derps derp serp derpy nerpy le.</p>
+			<div class="blogentry">
+				<p>Herp derpsum perp dee derp, mer herderder. Sherp berp derpler, herpem serp tee perper merpus terp dee. Sherpus berps herpsum herpler. Berps herderder herpsum herpderpsmer herp? Derperker der herpler derp derpsum berps perp sherpus. Merpus mer perper derpler perp tee. Berps derpus, derpler ler mer nerpy herpem derp der derps. Terp tee herpsum derpus der nerpy herpderpsmer dee. Merpus derp terp ner sherlamer. Derps herpler serp derpus. Derpler sherlamer derpy sherp sherper, ler dee derps. Ler ner derp herpsum sherp. Ler merpus, derp der derpy derperker perp. Der derpler sherlamer herp mer. Herpler derpus mer, derps ner herpy! Merpus herp, nerpy merp herderder. Ler herpsum derperker herpderpsmer herderder perper sherp. Serp derpler herderder berps. Derpus mer, merp derp herpler. Herpem terp serp derps herpsum sherper.</p>
+				<br>
+				<p>Herp derpsum le berp pee dee herderder ner. Merpus derpler ler mer derps der. Berp ler herderder, herpem derpus. Derperker perp ter, perper derps. Derpler derpus herpem perper. Dee herpem derps herp derpsum herpy le. Berps berp dee sherpus herp terp sherp tee sherlamer herpem! Berps dee, nerpy berp sherlamer derpler merp. Derps derpus le, derperker herpsum derp. Terp terpus sherpus merp. Tee pee serp derp sherper herpsum derpsum. Derperker terp pee sherper mer le berp perper herp derps. Pee derpus sherlamer merp derp derps mer. Herpy dee derps sherper. Herpsum herpderpsmer dee derp ler terp perper perp. Terpus herpderpsmer derpus, sherpus mer derperker merp herpy. Tee sherpus merp derpsum derps derp serp derpy nerpy le.</p>
+			</div>
 		</article>
 	</body>
 	<nav>
@@ -25,14 +33,17 @@
 		<a href="/#/">Next</a>
 	</nav>
 	<footer>
-		<p>Designed by: Evan Druce</p>
-		<p>email: drucee@gmail.com</p>
-		<a href="/#/">
-			<img src="https://www.facebookbrand.com/img/fb-art.jpg">
-		</a>
-		<a href="/#/">
-			<img src="http://megaicons.net/static/img/icons_sizes/8/178/48/logos-github-icon.png">
-		</a>
+		<div id = "bottombox">
+			<div id = "byline">
+				<p>Designed by: Evan Druce</p>
+				<p>email: drucee@gmail.com</p>
+			</div>
+			<a id="facebook" href="http://www.facebook.com/evan.druce1"> <img src="https://www.facebookbrand.com/img/fb-art.jpg" height="32" width="32">
+			</a>
+			<a id="github" href="https://github.com/drucee">
+				<img src="http://megaicons.net/static/img/icons_sizes/8/178/48/logos-github-icon.png">
+			</a>
+		</div>
 	</footer>
 <!--How was it to wireframe and create an HTML page with a pair? Because I turned in this assignment late, I was unable to pair on it. However, I found the previous assignment in pair HTML page creation quite interesting, as it forced me to share control on a project I would normally do solo. It was also a helpful exercise, as my pairing partner was able to fill in knowledge gaps that I might have had.
 Did you find wireframing to be helpful to your development process? I found wireframing to be helpful in that I didn't have to start writing code out of nowhere when it came time to create my HTML page. I referred to the wireframe constantly to help me figure out which elements needed to go on my HTML page.

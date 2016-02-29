@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<title>0.2 CSS Concepts</title>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+	<div id="topbox" class="clearfix">
+		<header>
+			<span><img src="imgs/selfie.jpg"></span>
+			<span><h1>Evan Druce's Homepage</h1></span>
+		</header>
+		<nav>
+			<a href="../index.html">Home</a>
+			<a class="active" href="index.html">Blog</a>
+			<a href="/#/">About Me</a>
+			<a href="/#/">Projects</a>
+		</nav>
+	</div>
+	<body>
+		<article>
+			<header>
+				<h2>CSS Concepts: Margin, Border, Padding</h2>
+				<h4>February 28, 2016</h4>
+			</header>
+			<div class="blogentry">
+				<p> When writing CSS for an HTML page, it is important to remember that every element on the page takes the form of a rectangle, or box. It doesn't matter what kind of element you're working with, whether it is a div, a span, a paragraph, an image, a link, or anything else--everything in HTML is a box. In fact, one of the important first steps when translating a webpage from rough sketch or wireframe to browser-displayable code is "boxifying" the design; that is, enclosing elements in boxes and arranging them appropriately. </p>
+				<img src="http://klucid.com/sites/default/files/imagecache/portfolio_large/img_0790.jpg" width ="300" height="225">
+				<p class="imgtext"> Examples of "boxified" wireframes. Image courtesy codepen.io. </p>
+				<p> But how do we ensure those boxes' relative placement on a page, and how do we keep them from overlapping? We can use CSS to make this simple. HTML pages are built according to the document-object (DOM) model, and every HTML <em>document</em> contains <em>objects</em> within it, in a sort of tree-like structure, whereby objects are nested in other objects. Those objects (Web content) are surrounded by three different types of buffers, from innermost to outermost: the <em>padding</em>, the <em>border</em>, and the <em>margin</em>. </p>
+				<img src="https://www.w3.org/TR/CSS2/images/boxdim.png" height ="170" width ="227.5">
+				<p class="imgtext"> The "box" model of an object in HTML. Image courtesy w3.org. </p>
+				<p> The outermost layer of an object's "box" is its margin. The margin is a transparent buffer that separates the object from other objects, or from the edges of the browser window. The border is a visible box that extends all the way around the object. Borders can be made any thickness, and can be solid or dashed. The innermost layer of the "box" before the content is the padding. This layer provides a buffer between the content and the border. Padding can be made either visible or invisible. </p>
+				<p> The dimensions of the padding, border, and margin rectangles default to zero, but we can use CSS to adjust them. Each layer can be adjusted wholesale (using the <em>padding</em>, <em>border</em>, and <em>margin</em> properties within the relevant object's CSS selector and setting a single value, or a value can be set for each individual side (top, bottom, left, right). Furthermore, borders can be made solid or dashed, as well as given a color.</p> 
+			</div>
+		</article>
+	</body>
+	<nav>
+		<a href="blog1.html">Prev</a>
+		<a href="/#/">Next</a>
+	</nav>
+	<footer>
+		<div id = "bottombox">
+			<div id = "byline">
+				<p>Designed by: Evan Druce</p>
+				<p>email: drucee@gmail.com</p>
+			</div>
+			<a id="facebook" href="http://www.facebook.com/evan.druce1"> <img src="https://www.facebookbrand.com/img/fb-art.jpg" height="32" width="32">
+			</a>
+			<a id="github" href="https://github.com/drucee">
+				<img src="http://megaicons.net/static/img/icons_sizes/8/178/48/logos-github-icon.png">
+			</a>
+		</div>
+	</footer>
+</html>
