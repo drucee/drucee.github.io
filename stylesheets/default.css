@@ -1,0 +1,58 @@
+html {
+	background-color: #498B84;
+	font-family: Tahoma;
+}
+
+
+header span img{
+	float: left;
+}
+
+}
+nav {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+nav a {
+	display: inline-block;
+	color: #dddddd;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+nav a:hover {
+	background-color: #111;
+}
+.active {
+	background-color: #546B94;
+}
+
+footer a {
+	float: right;
+}
+#facebook {
+	padding: 10px;
+}
+#github {
+	padding: 10px;
+}
+
+#byline {
+	text-align: left;
+	float: left;
+}
+#topbox {
+	border: 2px solid #dddddd;
+}
+
+#bottombox {
+	border: 2px solid #dddddd;
+}
+
+.clearfix {
+	overflow: auto;
+}
+section h2 {
+	font-size: 3em;
+}
