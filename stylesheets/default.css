@@ -1,6 +1,10 @@
-html {
+body {
 	background-color: #498B84;
 	font-family: Tahoma;
+}
+
+section {
+	display: block;
 }
 
 
@@ -28,6 +32,10 @@ nav a:hover {
 	background-color: #546B94;
 }
 
+footer {
+	border: 2px solid #dddddd;
+}
+
 footer a {
 	float: right;
 }
@@ -42,17 +50,12 @@ footer a {
 	text-align: left;
 	float: left;
 }
-#topbox {
-	border: 2px solid #dddddd;
-}
-
-#bottombox {
-	border: 2px solid #dddddd;
-}
 
 .clearfix {
 	overflow: auto;
+	border: 2px solid #dddddd;
 }
+
 section h2 {
 	font-size: 3em;
 }
