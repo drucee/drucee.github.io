@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+		<meta charset = "UTF-8">
+		<title>0.3 Arrays and Hashes</title>
+	</head>
+	<body>
+		<header class="clearfix">
+			<span><img src="imgs/selfie.jpg" alt = "selfie"></span>
+			<h1>Evan Druce's Homepage</h1>
+			<nav>
+				<a href="../index.html">Home</a>
+				<a class="active" href="index.html">Blog</a>
+				<a href="/#/">About Me</a>
+				<a href="/#/">Projects</a>
+			</nav>
+		</header>
+			<article>
+				<header>
+					<h2>Arrays and Hashes</h2>
+					<h4>March 8, 2016</h4>
+				</header>
+				<div class="blogentry">
+					<p> Ruby gives us two principal ways of creating "container" objects for use in programming. These "containers" are called <b>arrays</b> and <b>hashes</b>. Each of them can be used to store a collection of other types of information, as a restaurant menu might contain different dishes or an address book might contain names and phone numbers, but the ways in which they are used in Ruby differ. </p>
+					<p> An <b>array</b> is a one-dimensional sort of container object that stores other objects within it, in order. Those objects can be integers, floats, strings, Boolean values, or even other arrays. The order of these objects never changes unless the user explicitly manipulates the order. Arrays are designated by square brackets <code>[]</code>.</p>
+					<br>
+					<pre><code> menu = ['Hamburger', 'Cheeseburger', 'Double-Double', 'Fries', 'Soda', 'Milkshake']</code></pre>
+					<p> The above is an example of an array containing strings and stored in the variable <em>menu</em>. There are six strings in the array, each of which is given an index number. Index numbers start from 0 and increase from left to right, such that the first (leftmost) object in an array has index number 0. Using these index numbers we can access any object in the array; if we type in <code>menu[3]</code> to access the fourth object in the array, the console will return that object, <code>Fries</code>.</p>
+					<br>
+					<p><b>Hashes</b> are also ordered collections (since Ruby 1.8, anyway) that work very differently from arrays. Instead of storing single objects linearly, hashes store pairs of objects in correspondence, known as <em>key-value pairs</em>. Each key is a unique identifier; you can have multiple keys pointing to the same value, but you cannot have duplicate keys. Hashes are designated by curly brackets <code>{}</code>.</p>
+					<br>
+					<pre><code> mn_county_seats = { "Hennepin" => "Minneapolis", "Ramsey" => "Saint Paul", "Dakota" => "Hastings", "Washington" => "Stillwater", "Anoka" => "Anoka", "Scott" => "Shakopee", "Carver" => "Chaska"}</code></pre>
+					<p> The above is an example of a hash containing strings and using Minnesota county names and county seats as the key-value pairs. We can retrieve values from the hash by typing in the hash's name followed by the key name in square brackets, as follows: <code>mn_county_seats["Dakota"]</code> will return the corresponding value, <code>"Hastings"</code>. Hashes are useful to coders when they want to create "dictionaries" or other kinds of libraries of information where one item corresponds to another. Because the name of each key is customizable, hashes are also useful when looking up, selecting or filtering out specific items from a set.</p>
+				</div>
+			</article>
+
+		<nav>
+			<a href="css-concepts.html">Prev</a>
+			<a href="/#/">Next</a>
+		</nav>
+		<footer>
+			<div id = "byline">
+				<p>Designed by: Evan Druce</p>
+				<p>email: drucee@gmail.com</p>
+			</div>
+			<a id="facebook" href="http://www.facebook.com/evan.druce1"> <img src="https://www.facebookbrand.com/img/fb-art.jpg" alt="facebook logo" height="32" width="32">
+			</a>
+			<a id="github" href="https://github.com/drucee">
+				<img src="http://megaicons.net/static/img/icons_sizes/8/178/48/logos-github-icon.png" alt="github logo">
+			</a>
+		</footer>
+	</body>
+</html>
