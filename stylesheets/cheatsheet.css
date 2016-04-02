@@ -1,0 +1,22 @@
+article {
+	max-width: 93%;
+	background-color: white;
+}
+
+article h2 {
+	display: inline;
+	text-align: center;
+}
+
+article p {
+	font-family: "Georgia";
+}
+
+.cheatsheet_class {
+	font-family: "Georgia";
+}
+
+pre code {
+	display: inline-block;
+	background-color: #c0c0c0;
+}
