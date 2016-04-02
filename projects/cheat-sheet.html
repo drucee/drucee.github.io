@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ruby Cheatsheet</title>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/cheatsheet.css">
+	</head>
+<body id="preview">
+	<header class="clearfix">
+			<span><img src="../imgs/selfie.jpg" alt = "selfie"></span>
+			<h1>Evan Druce's Homepage</h1>
+			<nav>
+				<a href="../index.html">Home</a>
+				<a href="../blog/index.html">Blog</a>
+				<a href="../about.html">About Me</a>
+				<a class="active" href="projects.html">Projects</a>
+			</nav>
+	</header>
+<article>
+<h1 class="cheatsheet_class">Ruby Cheatsheet: Ruby Basics</h1>
+<p>Ruby is an <strong>object-oriented</strong> language, meaning its basic unit is the object. Everything in Ruby is considered to be an object; there are no non-object primitives, as there are in non-object-oriented languages like JavaScript.</p>
+<h2 class="cheatsheet_class"> Ruby Data Types: Numbers</h2>
+<p>Numbers in Ruby come in two types: <strong>integers</strong> and <strong>floats</strong>. Integers are whole numbers, positive or negative; floats have a following decimal point.<br>
+Ruby can do mathematical operations (addition, subtraction, multiplication, division, modulo, exponent) on numbers. Doing mathematical operations on integers will produce integer answers, and Ruby will round down in the case of a noninteger answer. (Note that <code>puts</code> writes to the console whatever comes after it).</p>
+	
+<pre><code class="language-ruby">puts <span class="hljs-number">2</span> + <span class="hljs-number">4</span> =&gt; <span class="hljs-number">6</span>  
+puts <span class="hljs-number">11</span> - <span class="hljs-number">2</span> =&gt; <span class="hljs-number">9</span>  
+puts <span class="hljs-number">3</span> * <span class="hljs-number">5</span> =&gt; <span class="hljs-number">15</span>  
+puts <span class="hljs-number">24</span> / <span class="hljs-number">7</span> =&gt; <span class="hljs-number">3</span>  <span class="hljs-comment"># rounded down</span>
+puts <span class="hljs-number">9</span> % <span class="hljs-number">2</span> =&gt; <span class="hljs-number">1</span>  <span class="hljs-comment"># the remainder of 9 / 2 is 1  </span>
+puts <span class="hljs-number">2</span> ** <span class="hljs-number">4</span> =&gt; <span class="hljs-number">16</span> <span class="hljs-comment"># exponent</span>
+
+puts <span class="hljs-number">5.5</span> + <span class="hljs-number">6.2</span> =&gt; <span class="hljs-number">11.7</span>  
+puts <span class="hljs-number">3.5</span> / <span class="hljs-number">2</span> =&gt; <span class="hljs-number">1.75</span> <span class="hljs-comment"># one of the numbers is a float, so float answer</span>
+</code></pre>
+
+	<p>You can use parentheses to perform more complex mathematical operations.</p>
+	
+<pre><code class="language-ruby">puts <span class="hljs-number">5</span> * (<span class="hljs-number">12.8</span> + <span class="hljs-number">3</span> ** <span class="hljs-number">4</span>) / <span class="hljs-number">19.8</span> - <span class="hljs-number">16</span> =&gt; <span class="hljs-number">7.686868686868685</span>  
+</code></pre>
+
+	<h2 class="cheatsheet_class"> Ruby Data Types: Strings
+	</h2>
+
+	<p>Groups of letters, or letters and numbers together, are called <strong>strings</strong>. Strings are usually designated with single or double quotes, like this: <code>'This is a string'</code> or <code>&quot;This is a string&quot;</code>.<br> You can add strings together; this is called <strong>concatenation</strong>.  You can also multiply a string by an integer (but you can’t multiply an integer by a string or a string by a string; think about this in terms of natural language, you can say “cow” five times, but you can’t say “five” “cow” times).</p>
+<pre><code class="language-ruby">puts <span class="hljs-string">"monkey"</span> + <span class="hljs-string">"shines"</span> =&gt; monkeyshines
+puts <span class="hljs-string">"cow"</span> * <span class="hljs-number">5</span> =&gt; cowcowcowcowcow  
+puts <span class="hljs-number">5</span> * <span class="hljs-string">"cow"</span> =&gt; &lt;<span class="hljs-constant">ERROR</span> <span class="hljs-constant">MESSAGE</span>&gt;  
+</code></pre>
+	<p>If you want to include an apostrophe or backslash within a string, you have to <em>escape</em> it with a backslash or you will get an error message. For example, to get Ruby to print “What’s up?” you would write <code>puts &quot;What\'s up?&quot;</code>.</p>
+
+	<h2 class="cheatsheet_class">Variables</h2>
+	<p><strong>Variables</strong> are used to store something in a computer’s memory for later use. This process is called <strong>assignment</strong>. To assign something to a variable in Ruby, you use this syntax (we’re also going to print it to the console here):
+	</p>
+<pre><code class="language-ruby">my_name = <span class="hljs-string">"Batman"</span> <span class="hljs-comment"># Ruby convention: use snake_case for variable names  </span>
+puts my_name =&gt; <span class="hljs-constant">Batman</span>  
+</code></pre>
+
+	<p>Variables can also be reassigned with the same syntax.</p>
+<pre><code class="language-ruby">my_name = <span class="hljs-string">"Batman"</span>  
+	puts <span class="hljs-string">"No cheese? I'm the goddamn "</span> + my_name + <span class="hljs-string">"!"</span> =&gt; <span class="hljs-constant">No</span> cheese? <span class="hljs-constant">I</span><span class="hljs-string">'m the goddamn Batman!  
+	my_name = "Bartman"  
+	puts "Everybody do the " + my_name + "!" =&gt; Everybody do the Bartman!  
+</span></code></pre>
+	<h2 class="cheatsheet_class">Methods</h2>
+		<p><strong>Methods</strong> are the actions that you do to numbers, strings, variables, and other kinds of Ruby objects. Using a method in Ruby is referred to as <strong>calling</strong> that method on an object. To call a method on an object, you append the method’s name to the object with a dot, like this: <code>monkey.climb</code>. That bit of code calls the <code>climb</code> method on the <code>monkey</code> object.<br>
+		Ruby has several built-in methods for each type of object. The arithmetic expressions we used above are examples of integer/float methods, and here are some examples of string methods:</p>
+<pre><code class="language-ruby">var1 = <span class="hljs-string">"ALEX TREBEK"</span>  
+puts var1.length =&gt; <span class="hljs-number">11</span> <span class="hljs-comment"># characters, including spaces  </span>
+puts var1.reverse =&gt; <span class="hljs-constant">KEBERT</span> <span class="hljs-constant">XELA</span>  
+puts var1 =&gt; <span class="hljs-string">"ALEX TREBEK"</span>
+</code></pre>
+	<p>Note that calling the <code>.reverse</code> method on <code>var1</code> didn’t change what was stored in <code>var1</code>. Many methods do change the variable in place; these are usually known as <strong>dangerous methods</strong> and have a <strong>bang</strong> symbol <code>!</code> at the end of them, by Ruby convention (but neither of these are hard and fast rules!).</p>
+<pre><code class="language-ruby">var1 = <span class="hljs-string">"ALEX TREBEK"</span>  
+var1.reverse!  
+puts var1 =&gt; <span class="hljs-constant">KEBERT</span> <span class="hljs-constant">XELA</span>  
+</code></pre>
+	<h2 class="cheatsheet_class">Writing Your Own Methods</h2>
+		<p>In addition to the built-in methods, you can create your own Ruby methods. Methods can be created by bracketing a block of code within the <code>def</code> and <code>end</code> keywords. Methods can take <strong>arguments</strong>, which are parameters passed into the method when it is called on an object.</p>
+<pre><code class="language-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">display_address</span><span class="hljs-params">(name, house_num, street, city, state)</span></span>
+p <span class="hljs-string">"Your name is "</span> + name + <span class="hljs-string">" "</span> + <span class="hljs-string">"and you live at "</span> + house_num.to_s + <span class="hljs-string">" "</span> + street + <span class="hljs-string">" "</span> + <span class="hljs-string">"in the city of "</span> + city + <span class="hljs-string">", "</span> + <span class="hljs-string">"in the state of "</span> + state + <span class="hljs-string">"."</span>
+<span class="hljs-keyword">end</span>  
+display_address(<span class="hljs-string">"Bernie Sanders"</span>, <span class="hljs-number">1600</span>, <span class="hljs-string">"Pennsylvania Avenue"</span>, <span class="hljs-string">"Washington"</span>, <span class="hljs-string">"DC"</span>)  
+<span class="hljs-status">=&gt;</span> <span class="hljs-constant">Your</span> name is <span class="hljs-constant">Bernie</span> <span class="hljs-constant">Sanders</span> and you live at <span class="hljs-number">1600</span> <span class="hljs-constant">Pennsylvania</span> <span class="hljs-constant">Avenue</span> in the city of <span class="hljs-constant">Washington</span>, in the state of <span class="hljs-constant">DC</span>.  
+</code></pre>
+		<p>Some methods take no arguments, like the <code>reverse</code> method above. Ruby will return an error message if the wrong number of arguments are passed into a method.</p>
+</article>
+		<footer>
+			<div id = "byline">
+				<p>Designed by: Evan Druce</p>
+				<p>email: <a href="mailto:drucee@gmail.com?Subject=Website%20Feedback" target="_top">drucee@gmail.com</a></p>
+			</div>
+			<a class="social" href="http://www.facebook.com/evan.druce1"> <img src="https://www.facebookbrand.com/img/fb-art.jpg" alt="facebook logo" height="32" width="32">
+			</a>
+			<a class="social" href="http://github.com/drucee">
+				<img src="http://megaicons.net/static/img/icons_sizes/8/178/48/logos-github-icon.png" alt = "github logo" height="32" width="32">
+			</a>
+			<a class="social" href="http://twitter.com/evan_druce"><img src="http://www.freelargeimages.com/wp-content/uploads/2015/05/Twitter_Logo_Hd_Png_03.png" alt = "twitter logo" height="32" width="32">
+			</a>
+			<a class="social" href="http://www.linkedin.com/in/evandrucejd"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" alt = "linkedin logo" height="32" width="32">
+			</a>
+		</footer>
+	</body>
+</html>

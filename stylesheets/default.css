@@ -28,6 +28,17 @@ nav a {
 nav a:hover {
 	background-color: #111;
 }
+
+#overview a {
+	display: block;
+	padding-bottom: 2em;
+	color: #dddddd;
+}
+
+#overview a:hover {
+	background-color: #111;
+}
+
 .active {
 	background-color: #546B94;
 }
@@ -39,12 +50,10 @@ footer {
 footer a {
 	float: right;
 }
-#facebook {
-	padding: 10px;
+.social {
+	padding: 14px;
 }
-#github {
-	padding: 10px;
-}
+
 
 #byline {
 	text-align: left;
