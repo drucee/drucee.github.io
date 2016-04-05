@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+		<meta charset = "UTF-8">
+		<title>0.7 How the Internet Works </title>
+	</head>
+	<body>
+		<header class="clearfix">
+			<span><img src="imgs/selfie.jpg" alt = "selfie"></span>
+			<h1>Evan Druce's Homepage</h1>
+			<nav>
+				<a href="../index.html">Home</a>
+				<a class="active" href="index.html">Blog</a>
+				<a href="../about.html">About Me</a>
+				<a href="../projects/projects.html">Projects</a>
+			</nav>
+		</header>
+			<article>
+				<header>
+					<h2>How the Internet Works</h2>
+					<h4>April 4, 2016</h4>
+				</header>
+				<div class="blogentry">
+					<iframe width="420" height="315" src="https://www.youtube.com/embed/GIA17H-b7Qs" frameborder="0" allowfullscreen></iframe>
+					<p>TL,DR: Not like this.</p> <br>
+					<p>The simplest way to describe it is that the internet is a global network of linked-up computers. From its origins in 1969 as the ARPANET, a Department of Defense network that linked computers at four different research institutions in California and Utah, the internet has grown to encompass almost every country in the world and about half the world's population. The word "internet" is commonly used to mean only the World Wide Web, by far the largest part of the internet, but it actually describes the network itself on which the Web (and other services like email, VOIP telephony, and newsgroups) runs. That network is made up of a variety of different connections: copper telephone wire, fiber-optic cable, coaxial cable ("wired" connections) or wireless connections (which use radio waves).</p>
+					<br>
+					<p>All of those connections serve only one purpose: to pass data from one computer to another. As such, <em>any</em> kind of information can be passed over the internet, as long as it can be converted into data that can be read by a computer. Generally, the internet moves data from one computer to another by means of a process called <b>packet switching</b>. Packet switching works by taking some piece of information that is created on a local computer, breaking it up into small chunks, called packets, and sending each packet over the network piece by piece. When the packets reach their destination, they are reassembled.</p>
+					<br>
+					<p>The movement of all of these packets through the connections of the internet is controlled by a system called <b>TCP/IP</b>, which stands for Transmission Control Protocol/Internet Protocol. IP is the addressing system of the internet, and every computer that is connected to the internet has a unique IP address, assigned by one of five regional IP address registries (like ARIN in North America). Under the first IP addressing protocol, known as IPv4, IP addresses consisted of four pairs of digits, such as 123.45.67.89, but all possible combinations were already exhausted by January 2011, prompting the introduction of a new system with longer addresses, called IPv6. TCP is the protocol that manages exactly how data will be broken up into packets, sent between IP addresses, resent if some packets get lost, and reassembled at the other end.</p>
+					<br>
+					<p>The computers that are on the internet can be broken down into two main types: <b>servers</b> and <b>clients</b>. Servers are the computers that hold information and pass it along when requested (like a web server that hosts a website); clients are the computers that receive that information. If computers are acting both as client and server at once (example: using BitTorrent to download and upload files), this is known as a <b>peer-to-peer</b> connection, or <b>P2P</b>. There are still other types of computers called <b>routers</b> that serve as intermediate connections between local and wide-area computer networks. If you have several internet-enabled devices at home and a broadband connection, you probably have one of these; it links up all of your devices so they can communicate locally (on a local-area network, or LAN), and then then connects the LAN to the global computer network.</p>
+				</div>
+			</article>
+
+		<nav>
+			<a href="JavaScript.html">Prev</a>
+			<a href="index.html">Next</a>
+		</nav>
+		<footer>
+			<div id = "byline">
+				<p>Designed by: Evan Druce</p>
+				<p>email: <a href="mailto:drucee@gmail.com?Subject=Website%20Feedback" target="_top">drucee@gmail.com</a></p>
+			</div>
+			<a class="social" href="http://www.facebook.com/evan.druce1"> <img src="https://www.facebookbrand.com/img/fb-art.jpg" alt="facebook logo" height="32" width="32">
+			</a>
+			<a class="social" href="http://github.com/drucee">
+				<img src="http://megaicons.net/static/img/icons_sizes/8/178/48/logos-github-icon.png" alt = "github logo" height="32" width="32">
+			</a>
+			<a class="social" href="http://twitter.com/evan_druce"><img src="http://www.freelargeimages.com/wp-content/uploads/2015/05/Twitter_Logo_Hd_Png_03.png" alt = "twitter logo" height="32" width="32">
+			</a>
+			<a class="social" href="http://www.linkedin.com/in/evandrucejd"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" alt = "linkedin logo" height="32" width="32">
+			</a>
+		</footer>
+	</body>
+</html>
